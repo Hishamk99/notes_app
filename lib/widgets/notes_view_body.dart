@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'cutom_app_bar.dart';
 import 'cutom_note_item.dart';
+import 'notes_list_view.dart';
 
 class NotesViewBody extends StatelessWidget {
   const NotesViewBody({super.key});
@@ -17,9 +17,9 @@ class NotesViewBody extends StatelessWidget {
           ),
           CustomAppBar(),
           NoteItem(),
+          Expanded(child: NotesListView()),
         ],
       ),
     );
   }
 }
-
