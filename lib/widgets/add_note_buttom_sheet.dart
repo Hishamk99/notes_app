@@ -19,15 +19,15 @@ class _AddNoteButtomSheetState extends State<AddNoteButtomSheet> {
       create: (context) => AddNotesCubit(),
       child: BlocConsumer<AddNotesCubit, AddNotesState>(
           listener: (context, state) {
-        if (state is NotesFailure) {
+        if (state is AddNotesFailure) {
           debugPrint('Failed ${state.errorMessage}');
         }
-        if (state is NotesSuccess) {
+        if (state is AddNotesSuccess) {
           Navigator.pop(context);
         }
       }, builder: (context, state) {
         return AbsorbPointer(
-          absorbing: state is NotesLoading ? true : false,
+          absorbing: state is AddNotesLoading ? true : false,
           child: Padding(
             padding: EdgeInsets.only(
               left: 16,
