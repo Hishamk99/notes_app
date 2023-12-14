@@ -41,9 +41,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hint: 'Content',
             maxLines: 4,
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 32),
           const ColorsListView(),
-          const SizedBox(height: 16),
+          const SizedBox(height: 32),
           BlocBuilder<AddNotesCubit, AddNotesState>(builder: (context, state) {
             var currentDate = DateTime.now();
             var formatedDate = DateFormat.yMd().format(currentDate);
